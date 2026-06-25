@@ -17,6 +17,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const canAnimatePointer =
+    window.matchMedia("(pointer: fine)").matches &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (canAnimatePointer) {
+    window.addEventListener("pointermove", (event) => {
+      const x = Math.round((event.clientX / window.innerWidth) * 100);
+      const y = Math.round((event.clientY / window.innerHeight) * 100);
+      document.documentElement.style.setProperty("--mx", `${x}%`);
+      document.documentElement.style.setProperty("--my", `${y}%`);
+    });
+
+    document.querySelectorAll(".portfolio-card, .package-card, .service-card").forEach((card) => {
+      card.addEventListener("pointermove", (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `translateY(-7px) rotateX(${(-y * 3).toFixed(2)}deg) rotateY(${(x * 3).toFixed(2)}deg)`;
+      });
+
+      card.addEventListener("pointerleave", () => {
+        card.style.transform = "";
+      });
+    });
+  }
+
   const revealItems = document.querySelectorAll(".reveal");
   const revealObserver = new IntersectionObserver(
     (entries) => {
