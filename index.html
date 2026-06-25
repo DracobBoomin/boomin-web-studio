@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boomin Web Studio</title>
+    <meta
+      name="description"
+      content="Boomin Web Studio creates polished websites that help businesses grow."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+  <header class="site-header">
+    <a class="logo" href="#">
+      <span class="logo-mark">B</span>
+      <span>Boomin Web Studio</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="#contact">Free Quote</a>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Professional Websites. Real Results.</p>
+        <h1 id="hero-title">Professional Websites That Help Local Businesses Grow.</h1>
+        <p class="hero-copy">
+          We build fast, modern websites for local businesses that want more customers, more trust, and more revenue.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#services">Get Started</a>
+          <a class="btn btn-secondary" href="#about">Learn More</a>
+        </div>
+
+        <ul class="highlights" aria-label="Studio highlights">
+          <li>Fast and responsive websites</li>
+          <li>SEO-ready structure</li>
+          <li>Clear calls to action built in</li>
+        </ul>
+      </section>
+
+      <section id="services" class="cards" aria-label="Services offered">
+        <article class="card">
+          <h2>🌐 Website Design</h2>
+
+          <p>
+            Beautiful, modern websites built to attract customers and
+            establish trust from the very first visit.
+          </p>
+        </article>
+        <article class="card">
+          <h2>📈 SEO Optimization</h2>
+
+          <p>
+            Help your business rank higher on Google so more local customers
+            can find you.
+          </p>
+        </article>
+        <article class="card">
+          <h2>📅 Online Booking</h2>
+
+          <p>
+            Let customers book appointments online 24/7 without making a
+            phone call.
+          </p>
+        </article>
+      </section>
+
+      <section class="why-us">
+        <h2>Why Choose Boomin Web Studio?</h2>
+
+        <div class="features">
+          <div class="feature">
+            <h3>⚡ Fast Turnaround</h3>
+            <p>We build modern websites quickly without sacrificing quality.</p>
+          </div>
+
+          <div class="feature">
+            <h3>📱 Mobile Friendly</h3>
+            <p>Every website looks amazing on phones, tablets, and desktops.</p>
+          </div>
+
+          <div class="feature">
+            <h3>💙 Ongoing Support</h3>
+            <p>Need updates after launch? We've got you covered.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <p class="eyebrow">Featured Work</p>
+        <h2>Websites built to make businesses look established.</h2>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card">
+            <div class="project-image">🚗</div>
+            <span class="project-tag">Automotive</span>
+            <h3>Palm Customs</h3>
+            <p>Automotive website concept with booking, gallery, and service highlights.</p>
+            <ul>
+              <li>Booking System</li>
+              <li>Photo Gallery</li>
+              <li>SEO Setup</li>
+            </ul>
+            <a href="#">View Project →</a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="project-image">🚘</div>
+            <span class="project-tag">Detailing</span>
+            <h3>Mobile Detailing</h3>
+            <p>Lead-focused service website designed for appointments and local SEO.</p>
+            <ul>
+              <li>Online Scheduling</li>
+              <li>Before & After Gallery</li>
+              <li>Google Maps</li>
+            </ul>
+            <a href="#">View Project →</a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="project-image">🚨</div>
+            <span class="project-tag">Emergency</span>
+            <h3>Rite Towing</h3>
+            <p>Emergency service website concept built for fast calls and trust.</p>
+            <ul>
+              <li>24/7 Call Button</li>
+              <li>Service Areas</li>
+              <li>Trust Badges</li>
+            </ul>
+            <a href="#">View Project →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing" class="estimator">
+        <p class="eyebrow">Instant Estimate</p>
+        <h2>See what your website could cost.</h2>
+
+        <div class="estimator-box">
+          <label>
+            Number of pages:
+            <input id="pages" type="number" value="3" min="1" />
+          </label>
+
+          <label>
+            <input id="booking" type="checkbox" />
+            Add online booking
+          </label>
+
+          <label>
+            <input id="seo" type="checkbox" />
+            Add SEO setup
+          </label>
+
+          <button id="calculateBtn">Calculate Estimate</button>
+
+          <h3 id="estimateResult">Estimated Price: $499</h3>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <p class="eyebrow">Get Your Free Quote</p>
+        <h2>Let's Build Something Amazing.</h2>
+
+        <form id="quoteForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Email Address" required />
+          <input type="text" id="business" placeholder="Business Name" />
+          <textarea id="details" placeholder="Tell us about your project..."></textarea>
+
+          <button type="submit">Send Quote Request</button>
+        </form>
+      </section>
+
+      <section id="about" class="about">
+        <h2>Built for ambitious businesses</h2>
+        <p>
+          Boomin Web Studio helps founders and growing teams create memorable websites that stand out and drive results.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

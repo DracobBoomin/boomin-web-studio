@@ -1,0 +1,404 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(245, 247, 251, 0.85);
+  backdrop-filter: blur(18px);
+}
+
+.logo {
+  color: #0f172a;
+  font-weight: 800;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #475569;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.nav-cta {
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #0f172a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px 80px;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: #2563eb;
+  opacity: 0.08;
+  border-radius: 50%;
+  filter: blur(120px);
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.hero-copy {
+  font-size: 20px;
+  color: #475569;
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: all .3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #cbd5e1;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  color: #475569;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card,
+.about {
+  background: white;
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover,
+.about:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
+}
+
+.card h2,
+.about h2 {
+  margin-top: 0;
+}
+
+.about {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.contact-section {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 42px;
+}
+
+#quoteForm {
+  max-width: 700px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#quoteForm input,
+#quoteForm textarea {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  font-size: 17px;
+  font-family: inherit;
+}
+
+#quoteForm textarea {
+  height: 180px;
+  resize: none;
+}
+
+#quoteForm button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#quoteForm button:hover {
+  transform: translateY(-3px);
+}
+
+/* ===========================
+   Estimator Section
+=========================== */
+
+.estimator {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.estimator h2 {
+  font-size: 42px;
+}
+
+.estimator-box {
+  max-width: 500px;
+  margin: 40px auto 0;
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  display: grid;
+  gap: 20px;
+  text-align: left;
+}
+
+.estimator-box label {
+  font-weight: 700;
+  color: #334155;
+}
+
+.estimator-box input[type="number"] {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+}
+
+#calculateBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* ===========================
+   Portfolio Section
+=========================== */
+
+.portfolio {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 42px;
+  max-width: 700px;
+  margin: 15px auto 60px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.portfolio-card {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 70px rgba(15, 23, 42, 0.15);
+}
+
+.portfolio-card:hover .project-image {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.portfolio-card h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.portfolio-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.project-image {
+  height: 180px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  display: grid;
+  place-items: center;
+  font-size: 64px;
+  margin-bottom: 24px;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card ul {
+  padding-left: 20px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.project-tag {
+  display: inline-block;
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.portfolio-card a {
+  display: inline-block;
+  margin-top: 25px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.portfolio-card a:hover {
+  text-decoration: underline;
+}
+
+.why-us {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.feature {
+  background: white;
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+  transition: 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+}
+
+.feature h3 {
+  font-size: 24px;
+}
+
+.feature p {
+  color: #64748b;
+}
